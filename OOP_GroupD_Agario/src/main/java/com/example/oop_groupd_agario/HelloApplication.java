@@ -15,10 +15,13 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
 
         Group myGroup= new Group();
+        //group is the layout of the window
         Scene MyScene=new Scene(myGroup,500,500,Paint.valueOf("#8da2b5"));
+        //holds the layout
         stage.setTitle("Welcome to AGARIO");
         stage.setScene(MyScene);
         stage.show();
+        //brings everything together
         Circle myCircle= new Circle(50, Paint.valueOf("#209177"));
         myGroup.getChildren().add(myCircle);
         myCircle.setCenterX(250);
