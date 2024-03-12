@@ -1,15 +1,18 @@
 package com.example.oop_groupd_agario;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
@@ -18,6 +21,8 @@ import java.io.IOException;
 public class MenuExample extends Application {
     @Override
     public void start(Stage stage) throws Exception {
+
+
         Group myGroup = new Group();
 
         // bg
@@ -55,7 +60,6 @@ public class MenuExample extends Application {
                 try {
                     // launch game
                     new HelloApplication().start(new Stage());
-
                     stage.close();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -104,9 +108,11 @@ public class MenuExample extends Application {
 
 
 
-
     }
     public static void main(String[] args) {
         launch();
     }
 }
+
+
+

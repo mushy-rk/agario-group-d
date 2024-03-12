@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class HelloApplication extends Application {
+public class Red extends Application {
     private static final int WIDTH = 2500;
     private static final int HEIGHT = 1000;
     private static final int PLAYER_RADIUS = 50;
@@ -30,7 +30,7 @@ public class HelloApplication extends Application {
         GraphicsContext gc = canvas.getGraphicsContext2D();
 
         // Initialize game objects
-        player = new Player(WIDTH / 2, HEIGHT / 2,  PLAYER_RADIUS, Color.PINK, PLAYER_INITIAL_SPEED);
+        player = new Player(WIDTH / 2, HEIGHT / 2,  PLAYER_RADIUS, Color.RED, PLAYER_INITIAL_SPEED);
         foodList = new ArrayList<>();
         spawnFood(INITIAL_FOOD_COUNT);
 

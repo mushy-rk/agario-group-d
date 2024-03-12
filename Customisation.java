@@ -13,6 +13,7 @@ import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.scene.control.ColorPicker;
 
 import java.io.IOException;
 
@@ -56,7 +57,6 @@ public class Customisation extends Application {
                 try {
                     // launch game
                     new HelloApplication().start(new Stage());
-                    String spritecolour = "PINK";
 
                     stage.close();
                 } catch (Exception e) {
@@ -93,8 +93,8 @@ public class Customisation extends Application {
             public void handle(MouseEvent event) {
                 try {
                     // launch game
-                    new HelloApplication().start(new Stage());
-                    String spritecolour = "RED";
+                    new Red().start(new Stage());
+
 
                     stage.close();
                 } catch (Exception e) {
@@ -126,8 +126,7 @@ public class Customisation extends Application {
             public void handle(MouseEvent event) {
                 try {
                     // launch game
-                    new HelloApplication().start(new Stage());
-                    String spritecolour = "BLUE";
+                    new Blue().start(new Stage());
 
                     stage.close();
                 } catch (Exception e) {
@@ -137,6 +136,40 @@ public class Customisation extends Application {
 
         };
         button3.addEventFilter(MouseEvent.MOUSE_CLICKED, handler3);
+
+
+
+        // Green button
+        Rectangle button4 = new Rectangle(400, 100, Paint.valueOf("#ffffff"));
+        button4.setX(750);
+        button4.setY(850);
+        myGroup.getChildren().add(button4);
+
+        // GREEN text
+        Label text4 = new Label("GREEN");
+        text4.setScaleY(3);
+        text4.setScaleX(3);
+        text4.setLayoutX(850);
+        text4.setLayoutY(900);
+        text4.setTextFill(Color.GREEN);
+        myGroup.getChildren().add(text4);
+
+        // press button(GREEN)
+        EventHandler<MouseEvent> handler4 = new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                try {
+                    // launch game
+                    new Green().start(new Stage());
+
+                    stage.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+
+        };
+        button4.addEventFilter(MouseEvent.MOUSE_CLICKED, handler4);
 
 
 
